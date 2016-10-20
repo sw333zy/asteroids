@@ -38,18 +38,24 @@
         console.log(event.keyCode);
         if (event.keyCode === 37) {
           console.log('left');
-          ship.htmlElem.style.transform = 'rotate(-90deg)';
-          
+          ship.angle -= 5;
+          // console.log(ship.angle);
+          ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
         if (event.keyCode === 38) {
-          console.log('up');
+          console.log('up'); //NEED UP KEY
         }
         if (event.keyCode === 39) {
           console.log('right')
+          ship.angle += 5;
+          // console.log(ship.angle);
+          ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
         if (event.keyCode === 40) {
-          console.log('down')
+          console.log('down') //NEED DOWN KEY
         }
+
+
 
         // Implement me!
 
