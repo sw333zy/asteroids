@@ -3,7 +3,12 @@
 
     var shipElem = document.getElementById('ship');
 
-    // Create your "ship" object and any other variables you might need...
+    var ship = {
+      htmlElem: shipElem,
+      velocity: 0,
+      angle: 0,
+    };
+
 
 
     var allAsteroids = [];
