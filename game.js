@@ -38,7 +38,7 @@
         console.log(event.keyCode);
         if (event.keyCode === 37) {
           console.log('left');
-          ship.angle -= 5;
+          ship.angle -= 15;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
@@ -47,7 +47,7 @@
         }
         if (event.keyCode === 39) {
           console.log('right')
-          ship.angle += 5;
+          ship.angle += 15;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
