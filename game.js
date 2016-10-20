@@ -44,6 +44,13 @@
         }
         if (event.keyCode === 38) {
           console.log('up'); //NEED UP KEY
+          ship.velocity +=5;
+          var shipMove = getShipMovement(ship.velocity, ship.angle);
+          console.log('shipmove', shipMove);
+          ship.htmlElem.style.top = '' + shipMove.top + 'px';
+          ship.htmlElem.style.left = '' + shipMove.left + 'px';
+          console.log(ship);
+
         }
         if (event.keyCode === 39) {
           console.log('right')
