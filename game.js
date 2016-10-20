@@ -9,6 +9,8 @@
       angle: 0,
     };
 
+    console.log(ship);
+
 
 
     var allAsteroids = [];
@@ -34,6 +36,20 @@
      */
     function handleKeys(event) {
         console.log(event.keyCode);
+        if (event.keyCode === 37) {
+          console.log('left');
+          ship.htmlElem.style.transform = 'rotate(-90deg)';
+          
+        }
+        if (event.keyCode === 38) {
+          console.log('up');
+        }
+        if (event.keyCode === 39) {
+          console.log('right')
+        }
+        if (event.keyCode === 40) {
+          console.log('down')
+        }
 
         // Implement me!
 
@@ -53,7 +69,7 @@
         // NOTE: you will need to change these arguments to match your ship object!
         // What does this function return? What will be in the `move` variable?
         // Read the documentation!
-        var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
+        //  UNCOMMENT THIS var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
 
 
         // Move the ship here!
