@@ -9,7 +9,12 @@
       angle: 0,
     };
 
+
     console.log(ship);
+
+    ship.htmlElem.style.top = '30px';
+    ship.htmlElem.style.top = '30px';
+
 
 
 
@@ -38,28 +43,26 @@
         console.log(event.keyCode);
         if (event.keyCode === 37) {
           console.log('left');
-          ship.angle -= 15;
+          ship.angle -= 5;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
         if (event.keyCode === 38) {
           console.log('up'); //NEED UP KEY
-          ship.velocity +=5;
-          var shipMove = getShipMovement(ship.velocity, ship.angle);
-          console.log('shipmove', shipMove);
-          ship.htmlElem.style.top = '' + shipMove.top + 'px';
-          ship.htmlElem.style.left = '' + shipMove.left + 'px';
-          console.log(ship);
+          ship.velocity +=1;
+
+
 
         }
         if (event.keyCode === 39) {
           console.log('right')
-          ship.angle += 15;
+          ship.angle += 55;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
         if (event.keyCode === 40) {
           console.log('down') //NEED DOWN KEY
+          ship.velocity = 0;
         }
 
 
@@ -82,7 +85,17 @@
         // NOTE: you will need to change these arguments to match your ship object!
         // What does this function return? What will be in the `move` variable?
         // Read the documentation!
-        //  UNCOMMENT THIS var move = getShipMovement(shipsCurrentVelocity, shipsCurrentAngle);
+         var move = getShipMovement(ship.velocity, ship.angle);
+         var top = parseInt(ship.htmlElem.style.top);
+         top -= move.top;
+         ship.htmlElem.style.top = top + 'px';
+
+        var left = parseInt(ship.velocity, ship.angle);
+        left += move.left;
+        ship.htmlElem.style.left = left + 'px';
+
+
+
 
 
         // Move the ship here!
