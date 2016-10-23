@@ -22,6 +22,7 @@
     shipElem.addEventListener('asteroidDetected', function (event) {
         // You can detect when a new asteroid appears with this event.
         // The new asteroid's HTML element will be in:  event.detail
+        allAsteroids[0]
         console.log(event.detail);
 
         // What might you need/want to do in here?
@@ -119,11 +120,11 @@
      * that you can use to detect whether one box is on top of another.
      *
      * @return void
-     */
+     */           //ITS SHOWING THE ASTEROID # AS THEY COME IN SCREEN
     function checkForCollisions() {
-    var allAsteriods = Asteroid
-    allAsteriods[0].getBoundingClientRect()
-      console.log(Asteroid)
+
+    //allAsteriods[0].getBoundingClientRect()
+      //console.log(Asteroid)
 
 
         // Implement me!
