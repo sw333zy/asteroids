@@ -23,9 +23,7 @@
         // You can detect when a new asteroid appears with this event.
         // The new asteroid's HTML element will be in:  event.detail
         console.log(event.detail);
-        if (event.detail === > 0) {
-          console.log(asteroid);
-        }       
+
         // What might you need/want to do in here?
 
     });
@@ -123,6 +121,9 @@
      * @return void
      */
     function checkForCollisions() {
+    var allAsteriods = Asteroid
+    allAsteriods[0].getBoundingClientRect()
+      console.log(Asteroid)
 
 
         // Implement me!
