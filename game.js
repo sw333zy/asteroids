@@ -19,11 +19,14 @@
 
 
     var allAsteroids = [];
+
     shipElem.addEventListener('asteroidDetected', function (event) {
         // You can detect when a new asteroid appears with this event.
         // The new asteroid's HTML element will be in:  event.detail
-        allAsteroids[0]
-        console.log(event.detail);
+        allAsteroids.push(event.detail);
+        console.log(ship.htmlElem.getBoundingClientRect());
+        console.log(event.detail.getBoundingClientRect());
+
 
         // What might you need/want to do in here?
 
@@ -45,26 +48,26 @@
         console.log(event.keyCode);
         if (event.keyCode === 37) {
           console.log('left');
-          ship.angle -= 5;
+          ship.angle -= 10;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
         else if (event.keyCode === 38) {
           console.log('up'); //NEED UP KEY
-          ship.velocity += 3;
+          ship.velocity += 1;
 
 
 
         }
         else if (event.keyCode === 39) {
           console.log('right')
-          ship.angle += 5;
+          ship.angle += 10;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
         else if (event.keyCode === 40) {
           console.log('down') //NEED DOWN KEY
-          ship.velocity -= 3;
+          ship.velocity -= 1;
         }
 
 
@@ -123,8 +126,12 @@
      */           //ITS SHOWING THE ASTEROID # AS THEY COME IN SCREEN
     function checkForCollisions() {
 
-    //allAsteriods[0].getBoundingClientRect()
-      //console.log(Asteroid)
+
+
+      // if (allAsteriods.getBoundingClientRect() === shipElem.getBoundingClientRect()){
+      //   console.log(hit);
+      // }
+
 
 
         // Implement me!
