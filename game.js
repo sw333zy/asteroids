@@ -12,8 +12,8 @@
 
     console.log(ship);
 
-    ship.htmlElem.style.top = '30px';
-    ship.htmlElem.style.top = '30px';
+    ship.htmlElem.style.top = '500px';
+    ship.htmlElem.style.left = '30px';
 
 
 
@@ -47,22 +47,22 @@
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
-        if (event.keyCode === 38) {
+        else if (event.keyCode === 38) {
           console.log('up'); //NEED UP KEY
-          ship.velocity +=1;
+          ship.velocity += 3;
 
 
 
         }
-        if (event.keyCode === 39) {
+        else if (event.keyCode === 39) {
           console.log('right')
-          ship.angle += 55;
+          ship.angle += 5;
           // console.log(ship.angle);
           ship.htmlElem.style.transform = 'rotate(' + ship.angle + 'deg)';
         }
-        if (event.keyCode === 40) {
+        else if (event.keyCode === 40) {
           console.log('down') //NEED DOWN KEY
-          ship.velocity = 0;
+          ship.velocity -= 3;
         }
 
 
@@ -90,7 +90,7 @@
          top -= move.top;
          ship.htmlElem.style.top = top + 'px';
 
-        var left = parseInt(ship.velocity, ship.angle);
+         var left = parseInt(ship.htmlElem.style.left);
         left += move.left;
         ship.htmlElem.style.left = left + 'px';
 
@@ -120,6 +120,7 @@
      * @return void
      */
     function checkForCollisions() {
+      
 
         // Implement me!
 
