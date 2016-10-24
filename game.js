@@ -126,10 +126,15 @@
      */           //ITS SHOWING THE ASTEROID # AS THEY COME IN SCREEN
     function checkForCollisions() {
 
+       var shipCoordinates = getShipMovement.event.detail();{
+         console.log(shipCoordinates);
+       }
 
 
-      // if (allAsteriods.getBoundingClientRect() === shipElem.getBoundingClientRect()){
-      //   console.log(hit);
+
+
+      //if (allAsteriods.getBoundingClientRect() === ship.htmlElem.getBoundingClientRect()){
+      //  console.log(hit);
       // }
 
 
