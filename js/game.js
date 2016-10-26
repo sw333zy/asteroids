@@ -26,6 +26,7 @@
         allAsteroids.push(event.detail);
         console.log(ship.htmlElem.getBoundingClientRect());
         console.log(event.detail.getBoundingClientRect());
+        console.log(event.detail)
 
 
         // What might you need/want to do in here?
@@ -126,9 +127,30 @@
      */           //ITS SHOWING THE ASTEROID # AS THEY COME IN SCREEN
     function checkForCollisions() {
 
-       var shipCoordinates = getShipMovement.event.detail();{
-         console.log(shipCoordinates);
-       }
+       var shipCoordinates = ship.htmlElem.getBoundingClientRect();
+      //  console.log(shipCoordinates);
+
+      allAsteroids.forEach(function position(each){
+        var asteroidpos = each.getBoundingClientRect()
+        if (shipCoordinates.bottom > asteroidpos.top &&
+            shipCoordinates.top < asteroidpos.bottom &&
+            shipCoordinates.right > asteroidpos.left &&
+            shipCoordinates.left < asteroidpos.right) {
+        crash(each);
+        ship.velocity = 0;
+        }
+
+      });
+
+
+
+
+
+
+
+      //  if (allAsteriods.getBoundingClientRect.right < ship.htmlElem.getBoundingClientRect.top);{
+      //    console.log('no hit')
+      //  }
 
 
 
